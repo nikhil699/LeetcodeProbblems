@@ -1,0 +1,45 @@
+class Solution(object):
+    def closedIsland(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        rows = len(grid)
+        cols = len(grid[0])
+
+        def dfs(grid, r, c, rows, cols):
+            if r < 0 or c < 0 or r >= rows or c >= cols or grid[r][c] == 1:
+                return
+            grid[r][c] = 1  # Mark visited
+            dfs(grid, r + 1, c, rows, cols)
+            dfs(grid, r - 1, c, rows, cols)
+            dfs(grid, r, c + 1, rows, cols)
+            dfs(grid, r, c - 1, rows, cols)
+        
+        # Step 1: Remove all lands connected to the boundary
+        for i in range(rows):  # Left & Right boundaries
+            if grid[i][0] == 0:
+                dfs(grid, i, 0, rows, cols)
+            if grid[i][cols - 1] == 0:
+                dfs(grid, i, cols - 1, rows, cols)
+
+        for j in range(cols):  # Top & Bottom boundaries
+            if grid[0][j] == 0:
+                dfs(grid, 0, j, rows, cols)
+            if grid[rows - 1][j] == 0:
+                dfs(grid, rows - 1, j, rows, cols)
+
+        # Step 2: Count the number of closed islands
+        numberIsland = 0
+        for i in range(rows):
+            for j in range(cols):
+                if grid[i][j] == 0:
+                    numberIsland += 1
+                    dfs(grid, i, j, rows, cols)
+
+        return numberIsland
+
+
+grid = [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
+sol = Solution()
+print(sol.closedIsland(grid))

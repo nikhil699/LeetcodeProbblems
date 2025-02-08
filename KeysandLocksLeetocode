@@ -18,6 +18,7 @@ class Solution(object):
         
         return len(visited) == len(rooms)
 
+
 # Create an instance of Solution
 sol = Solution()
 rooms = [[1],[2],[3],[]]
