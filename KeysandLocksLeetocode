@@ -1,0 +1,24 @@
+from collections import deque
+class Solution(object):
+    def canVisitAllRooms(self, rooms):
+        """
+        :type rooms: List[List[int]]
+        :rtype: bool
+        """
+        visited = set()
+        visited.add(0)
+        queue = deque([0])
+
+        while queue:
+            element = queue.popleft()
+            for key in rooms[element]:
+                if key not in visited:
+                    visited.add(key)
+                    queue.append(key)
+        
+        return len(visited) == len(rooms)
+
+# Create an instance of Solution
+sol = Solution()
+rooms = [[1],[2],[3],[]]
+print(sol.canVisitAllRooms(rooms))  # Output: True
