@@ -1,0 +1,51 @@
+from collections import deque
+
+class Solution(object):
+    def orangesRotting(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        n = len(grid) # length of rows
+        m = len(grid[0]) # length of column
+        queue = deque()
+        minutes = 0
+
+        # Find all initially rotten oranges (store them in a queue) and also count the normal fresh fruit.
+        count = 0
+        for i in range(n):
+            for j in range(m):
+                if grid[i][j] == 2:
+                    queue.append((i,j))
+                if grid[i][j] == 1:
+                    count = count + 1
+
+        # Step 2: BFS traversal (4-directional spread)
+        directions = [(1,0), (-1,0), (0,1), (0,-1)]  # Down, Up, Right, Left
+
+        while queue and count > 0:
+            for item in range(len(queue)):
+                i,j = queue.popleft()
+
+                for x,y in directions:
+                    x= x+i
+                    y = y+j
+                    if 0 <= x < n and 0 <= y < m and grid[x][y] == 1:
+                        grid[x][y] = 2  # Mark as rotten
+                        queue.append((x, y))  # Add to queue
+                        count -= 1
+            
+            minutes = minutes + 1
+
+        if count > 0:
+            return -1
+        else:
+            return minutes
+                               
+
+
+grid = [[2,1,1],[1,1,0],[0,1,1]]
+sol = Solution()
+
+print(sol.orangesRotting(grid))
+
