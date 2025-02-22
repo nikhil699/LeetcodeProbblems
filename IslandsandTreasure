@@ -1,0 +1,47 @@
+from collections import deque
+from typing import List
+class Solution:
+    def islandsAndTreasure(self, grid: List[List[int]]) -> None:
+
+        if not grid or not grid[0]:
+            return
+        
+        n = len(grid)
+        m = len(grid[0])
+        queue = deque()
+
+        for i in range(n):
+            for j in range(m):
+                if grid[i][j] == 0:
+                    queue.append((i,j))
+
+        directions = [(0,1),(-1,0),(1,0),(0,-1)]
+
+        while queue:
+            k,c = queue.popleft()
+
+
+            for xy,xz in directions:
+                
+                xx = xy + k
+                yy = xz + c
+
+                if 0 <= xx < n and 0 <= yy < m and grid[xx][yy] == 2147483647:
+                    grid[xx][yy] = grid[k][c] + 1
+                    queue.append((xx,yy))
+        
+        return grid
+
+sol = Solution()
+
+grid_input = [
+  [2147483647, -1, 0, 2147483647],
+  [2147483647, 2147483647, 2147483647, -1],
+  [2147483647, -1, 2147483647, -1],
+  [0, -1, 2147483647, 2147483647]
+] 
+
+print(sol.islandsAndTreasure(grid_input))
+
+
+    

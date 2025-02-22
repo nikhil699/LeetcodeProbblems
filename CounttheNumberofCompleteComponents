@@ -1,0 +1,60 @@
+from collections import defaultdict, deque
+
+class Solution(object):
+    def countCompleteComponents(self, n, edges):
+        """
+        :type n: int
+        :type edges: List[List[int]]
+        :rtype: int
+        """
+        # Step 1: Build the adjacency list
+        graph = defaultdict(list)
+
+        for u, v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
+        
+        visited = set()
+
+        def dfs(node):
+            stack = [node]
+            component = set()
+
+            while stack:
+                item = stack.pop()
+                if item in visited:
+                    continue
+                visited.add(item)
+                component.add(item)
+                
+                for neighbor in graph[item]:
+                    if neighbor not in visited:
+                        stack.append(neighbor)
+
+            return component
+
+        count = 0
+        for node in range(n):
+            if node not in visited:
+                component = dfs(node)
+
+                # Check if the component is complete
+                isComplete = True
+                for i in component:
+                    if len(graph[i]) != len(component) - 1:
+                        isComplete = False
+                        break
+
+                if isComplete:
+                    count += 1
+
+        return count
+
+n = 6
+edges = [[0,1],[0,2],[1,2],[3,4]]
+sol = Solution()
+print(sol.countCompleteComponents(n,edges))
+
+
+        
+        

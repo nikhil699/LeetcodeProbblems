@@ -1,0 +1,35 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        count_character = {}
+
+        for character in s:
+            if character not in count_character:
+                count_character[character] = 1
+            else:
+                count_character[character] += 1
+
+        for character in t:
+            if character not in count_character:
+                return False
+            count_character[character] -= 1
+            
+
+
+        for character in count_character.values():
+            if character != 0:
+                return False
+        
+        return True
+        
+       
+s = "anagram"
+t = "nagaram"
+
+sol = Solution()
+        
+print(sol.isAnagram(s,t))

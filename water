@@ -1,0 +1,44 @@
+#(1) You are given an array of integers, height, of length n. Each element in the array 
+# represents the height of a vertical line drawn at the corresponding index, where the 
+# line extends from the point (i, 0) to (i, height[i]).
+# Your task is to determine two lines that, together with the x-axis, form a container 
+# that can hold the maximum amount of water. Return the largest possible amount of water that can be 
+# contained within the container formed by these two lines.
+
+
+
+
+
+
+
+#(2) A robot is positioned at the top-left corner of an m x n grid and needs to move to the bottom-right corner. 
+# At each step, the robot can only move either down or right. Given the dimensions of the grid (m and n), 
+# calculate how many distinct paths the robot can take to reach the bottom-right corner.
+
+# m=3 n=7
+
+#(3) Given a string s, reverse only all the vowels in the string and return it.
+
+#The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+#Input: s = "IceCreAm"
+
+#Output: "AceCreIm"
+#Nausheen Siddiqui to Everyone (12:39 PM)
+#Input: s = "leetcode"
+
+#Output: "leotcede"
+#Input: m = 3, n = 7
+#Output: 28
+
+
+#Input: m = 3, n = 2
+#Output: 3
+
+# nput: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+maxArea = height[0]
+for i in range(1,len(height)):
+    maxArea = max(maxArea, height[i])
+
+
+

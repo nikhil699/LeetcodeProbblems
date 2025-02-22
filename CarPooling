@@ -1,0 +1,31 @@
+# Approach : We use a difference array (timeline) to mark passenger pickup and drop-off points. As we traverse this timeline, we maintain a running sum (current_passenger) to check if the capacity is exceeded at any location. If it exceeds at any point, we return False; otherwise, True. 
+# Time complexity : 0(n)
+# Space Complexity : O(1001) ≈ O(1), since the array size is constant.
+
+class Solution(object):
+    def carPooling(self, trips, capacity):
+        """
+        :type trips: List[List[int]]
+        :type capacity: int
+        :rtype: bool
+        """
+        timeline = [0]*1001
+        for trip in trips:
+            timeline[trip[1]] += trip[0]
+            timeline[trip[2]] -= trip[0]
+
+       
+        
+        current_passenger = 0
+
+        for time in timeline:
+            current_passenger = current_passenger + time
+            if current_passenger > capacity:
+                return False
+        return True
+
+trips = [[2,1,5],[3,3,7]]
+capacity = 4
+sol = Solution()
+
+print(sol.carPooling(trips,capacity))

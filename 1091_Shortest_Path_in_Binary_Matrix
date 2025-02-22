@@ -1,0 +1,57 @@
+# as we have a grid of matrix having 0 and 1 i have to find the shortestb clear path in the given matrix starting from first index 0,0 if that index having value 1 to end index if end index having value 1 otherwise have to return -1 and one more catch is here i have to iterate only those indexex having value 0 and if no path is there then in that case i have to return -1.
+# my approach is to be if first and last index having 0 then inthat case i call BFS here like to call on that first index check their neighbpur  store it into queue and if the neighbour having value 0 then in that case i store it into queue and check till the element inside the queue.
+# if i found path the. directly return the count otherwise return -1.
+
+#Haan! ✅ BFS automatically shortest path dega kyunki:
+
+#Level-wise traversal hota hai → Pehle wale nodes pehle process honge.
+#Queue FIFO hoti hai → Jo bhi sabse pehle kisi cell tak pahunch raha hai, wahi shortest distance pe hoga.
+#Har cell sirf pehli baar visit hota hai → Matlab jo pehle pahunch gaya, wahi shortest distance pe confirm ho gaya!
+
+
+
+from collections import deque
+class Solution(object):
+    def shortestPathBinaryMatrix(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        if not grid:
+            return -1
+        
+        rows = len(grid)
+        cols = len(grid[0])
+
+        if rows == 1 and grid[0][0] == 0 and cols == 1:
+            return 1
+        
+        if grid[0][0] != 0 or grid[rows-1][cols-1] != 0:
+            return -1
+        
+        directions = [(0,1),(-1,0),(1,0),(0,-1),(1,1),(-1,-1),(-1,1),(1,-1)]
+        queue = deque()
+
+        queue.append((0,0,1))
+        grid[0][0] = 1
+
+       
+        while queue:
+            x,y,distance = queue.popleft()
+            if x == rows-1 and y == cols-1:
+                return distance 
+
+            for element in directions:
+                x1 = x + element[0]
+                y1 = y + element[1]
+                if  0 <= x1 < rows and 0 <= y1 < cols and  grid[x1][y1] == 0:
+                    queue.append((x1,y1,distance + 1))
+                    grid[x1][y1] = 1
+
+        return -1
+    
+grid = [[0,0,0],[1,1,0],[1,1,0]]
+sol = Solution()
+
+print(sol.shortestPathBinaryMatrix(grid))
+        

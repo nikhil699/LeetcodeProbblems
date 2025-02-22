@@ -1,0 +1,43 @@
+from collections import deque
+class Solution(object):
+    def shortestPathBinaryMatrix(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        rows = len(grid)
+        cols = len(grid[0])
+
+        # Step 1: Edge case check
+        if grid[0][0] != 0 or grid[rows-1][cols-1] != 0:
+            return -1
+
+        queue = deque()
+        queue.append((0,0,1))
+        directions = [(0,1),(-1,0),(1,0),(0,-1),(-1,1),(1,-1),(-1,-1),(1,1)]
+        minutes = 0
+
+        while queue:
+            i, j, path_length = queue.popleft()
+
+            # If reached the bottom-right corner, return path length
+            if i == rows - 1 and j == cols - 1:
+                return path_length
+
+
+            for x,y in directions:
+                x = x + i
+                y = y + j
+                if 0 <= x < rows and 0 <= y < cols and grid[x][y] == 0:
+                    queue.append((x,y,path_length + 1))
+                    grid[x][y] = 1
+            
+        
+        return -1
+
+        
+grid = [[0,0,0],[1,1,0],[1,1,0]]
+
+sol = Solution()
+
+print(sol.shortestPathBinaryMatrix(grid))
