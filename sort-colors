@@ -1,0 +1,43 @@
+class Solution(object):
+    def sortColors(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        white = 0
+        red = 0
+        blue = 0
+        for balls in nums:
+            if balls == 0:
+                red += 1
+            elif balls == 1:
+                white += 1
+            else:
+                blue += 1
+        
+        print(red,white,blue)
+        index = 0
+
+        for balls in range(0, len(nums)):
+            while red > 0:
+                nums[index] = 0
+                red -= 1
+                index = index + 1
+            while white > 0:
+                nums[index] = 1
+                white -= 1
+                index = index + 1
+            while blue > 0:
+                nums[index] = 2
+                blue -= 1
+                index = index + 1
+        
+        return nums
+
+
+        
+
+
+nums = [2,0,2,1,1,0]
+sol = Solution()
+print(sol.sortColors(nums))

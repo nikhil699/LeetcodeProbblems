@@ -1,0 +1,40 @@
+class Solution(object):
+    def maxVowels(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        vowels = set("aeiou")
+        left = 0
+        maxVowels = 0
+        currVowels = 0
+
+        # Step 1: Initialize the first window of size `k`
+        for right in range(k):
+            if s[right] in vowels:
+                currVowels += 1
+        maxVowels = currVowels
+    
+        for right in range(k,len(s)):
+            if s[right] in vowels:
+                currVowels += 1
+            
+            if s[left] in vowels:
+                currVowels -= 1
+            
+            left += 1
+        
+            maxVowels = max(maxVowels, currVowels)
+            
+
+
+        
+        return maxVowels
+
+
+
+s = "abciiidef"
+k = 3
+sol = Solution()
+print(sol.maxVowels(s,k))

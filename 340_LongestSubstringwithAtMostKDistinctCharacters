@@ -1,0 +1,29 @@
+def longestSubstringWithMostDistinctChar(s, k):
+    if k == 0:  # Edge case: No valid substring possible
+        return 0
+    
+    left = 0
+    result = 0
+    count = {}
+
+    for right in range(len(s)):
+        count[s[right]] = count.get(s[right], 0) + 1
+
+        while len(count) > k:
+            count[s[left]] -= 1
+            if count[s[left]] == 0:
+                del count[s[left]]
+            left += 1  # Shrink the window
+        
+        result = max(result, right - left + 1)  # Update longest valid substring
+    
+    return result
+
+
+# Running test cases
+print(longestSubstringWithMostDistinctChar("abcadcacacaca", 3))  # ✅ Expected Output: 7 ("acacaca")
+print(longestSubstringWithMostDistinctChar("eceba", 2))  # ✅ Expected Output: 3 ("ece")
+print(longestSubstringWithMostDistinctChar("aa", 1))  # ✅ Expected Output: 2 ("aa")
+print(longestSubstringWithMostDistinctChar("aabbcc", 2))  # ✅ Expected Output: 4 ("aabb" or "bbcc")
+print(longestSubstringWithMostDistinctChar("aabbcc", 3))  # ✅ Expected Output: 6 ("aabbcc")
+print(longestSubstringWithMostDistinctChar("aaaa", 1))  # ✅ Expected Output: 4 ("aaaa")

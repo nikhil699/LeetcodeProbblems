@@ -1,0 +1,19 @@
+# Aapko minimum length ka substring s se nikalna hai jo t ke sabhi characters ko contain kare (order zaroori nahi hai).
+
+def minimumWindowSubstring(s,t):
+
+    if len(s) < len(t):
+        return ""
+    
+    if not s or not t:
+        return ""
+    
+    
+
+
+
+
+s = "ADOBECODEBANC"
+t = "ABC"
+
+print(minimumWindowSubstring(s,t))

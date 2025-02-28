@@ -1,0 +1,56 @@
+class Solution(object):
+    def findAnagrams(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        countFreqforP = {}
+        countFreqforS = {}
+        result = []
+
+        if len(p) > len(s):
+            return []
+
+        for characters in p:
+            if characters not in countFreqforP:
+                countFreqforP[characters] = 1
+            else:
+                countFreqforP[characters] += 1
+        
+
+        for characters in range(0,len(p)):
+            if s[characters] not in countFreqforS:
+                countFreqforS[s[characters]] = 1
+            else:
+                countFreqforS[s[characters]] += 1
+
+
+        if countFreqforP == countFreqforS:
+            result.append(0)
+        
+
+        for charcters in range(len(p),len(s)):
+            if s[charcters] not in countFreqforS:
+                countFreqforS[s[charcters]] = 1
+            else:
+                countFreqforS[s[charcters]] += 1
+
+            leftMostItem = s[charcters - len(p)]
+            countFreqforS[leftMostItem] -= 1
+          
+           
+            if countFreqforS[leftMostItem] == 0:
+                del countFreqforS[leftMostItem]
+
+            
+            if countFreqforP == countFreqforS:
+                result.append(charcters - len(p) + 1)
+        
+        return result 
+
+s = "cbaebabacd"
+p = "abc"
+
+sol = Solution()
+print(sol.findAnagrams(s,p))

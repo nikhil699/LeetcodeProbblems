@@ -1,0 +1,40 @@
+# Time Complexity: O(N)
+# Space Complexity: O(1) (since at most 2 distinct characters are stored)
+
+def longestSubstringWithAtMost(input):
+    left = 0
+    result = 0
+
+    count = {}
+
+    if len(input) < 2:
+        return ""
+
+    for right in range(0,len(input)):
+        if input[right] not in count:
+            count[input[right]] = 1
+        else:
+            count[input[right]] += 1
+
+        while len(count) > 2:
+            leftmost = input[left]
+            count[leftmost] -= 1
+            
+            if count[leftmost] == 0:
+                del count[leftmost]
+            
+            left = left + 1
+        
+        result = max(result, right - left + 1)
+    
+    return result
+
+
+
+
+
+
+input01 = "eceba"
+input02 = "ccaabbb"
+
+print(longestSubstringWithAtMost(input01))
