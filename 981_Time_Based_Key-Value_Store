@@ -1,0 +1,52 @@
+from collections import defaultdict
+from sortedcontainers import SortedDict
+
+
+class TimeMap(object):
+
+    def __init__(self):
+        self.store = defaultdict(SortedDict)
+
+    def set(self, key, value, timestamp):
+        """
+        :type key: str
+        :type value: str
+        :type timestamp: int
+        :rtype: None
+        """
+        self.store[key][timestamp] = value
+        
+
+    def get(self, key, timestamp):
+        """
+        :type key: str
+        :type timestamp: int
+        :rtype: str
+        """
+        if key not in self.store:
+            return ""
+        sorted_dict = self.store[key]
+
+        idx = sorted_dict.bisect_right(timestamp)
+         # Binary search for closest timestamp ≤ given timestamp
+        if idx == 0:
+            return ""  # No valid timestamp found
+        return sorted_dict.peekitem(idx - 1)[1]
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
+
+
+
+sol = TimeMap()
+
+sol.set("foo", "bar", 1)
+sol.get("foo", 1)
+sol.get("foo", 3)
+sol.set("foo", "bar2", 4)
+sol.get("foo", 4)
+sol.get("foo", 5)
+

@@ -1,3 +1,161 @@
 <!-- https://www.linkedin.com/posts/sumitlad_if-i-travel-back-to-when-i-started-preparing-activity-7300235060853518336-N8cT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc -->
 
+https://www.linkedin.com/posts/sumitlad_if-i-was-hiring-you-as-a-software-engineer-activity-7302035254523961345-3s0G?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+
+
+
+
+Read Engineering blogs
+https://www.linkedin.com/posts/tannika-majumder-424a5040_20-software-engineering-research-papers-activity-7304118912130920449-5G9T?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+
+
+https://www.linkedin.com/posts/anshul-chhabra-46ba9b113_solving-problems-on-leetcode-was-hard-for-activity-7303287031244197890-oSan?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+Google System Design Interview Questions for Software Developer in 2025.
+
+https://www.linkedin.com/posts/priteshjagani_dear-software-engineers-if-youre-targeting-activity-7303405718680846336-ZdiQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+1. Design Google Map
+2. Design YouTube’s Video Streaming Service
+3. Design a Global File Storage System (DropBox)
+4. Design a Search Autocomplete System
+5. Design a Distributed Web Crawler
+6. Design a Rate Limiter for an API
+7. Design a Social Media Platform like Twitter
+8. Design a Traffic Control System
+9. Design a Ride-Sharing System (e.g., Uber)
+10. Design a system for collecting and aggregating user activities for Google.
+11. Design a system such that google developer gets access to user's data for fixing the bug in the app.
+12. Design a Content Delivery Network (CDN)
+13. Design a Code Collaboration Platform
+14. Design a URL Shortening Service
+15. Design a Traffic Control System
+16. Design Ticketmaster
+17. Design FB Live Comments
+18. Design GoPuff
+
+
+https://www.linkedin.com/posts/aakanksha-saxena-b989aa142_hiring-sdeiii-backenddeveloper-activity-7297897429335519232-z3tN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+
+
+Nosql/Couchbase/Mongo DB
+
+But choosing between 2 good options is quite hard, that’s what it’s all about.
+
+Your design choices depend on:
+
+- scalability goals
+- latency sensitivity
+- security requirements
+- the business and budget
+- data migration strategies
+- the team and the skill sets
+- disaster recovery strategies
+- peak load handling capacity
+- the deployment environment
+- geographic distribution needs
+- third-party service integrations
+- customization and extensibility
+- integration with existing systems
+- multitenancy and isolation levels
+- API dependencies and limitations
+- versioning and rollback capabilities
+- compliance with industry standards
+- internationalization and localization
+- environmental sustainability concerns
+- user authentication and authorization
+
+Every problem and system will be different, so you can practice good approaches with questions.
+
+But in the end, you have to make choices that ultimately make a better system.
+
+See it as a series of sacrifices you’ll make for an efficient system.
+
+The explanation of these choices is how you clear system design each time.
+
+
+#/*
+#Given:
+#A string s which consists of lowercase or uppercase letters only
+
+#Problem:
+#Find the length of the longest palindrome that can be built with the characters of the string
+
+#Example:
+#Input: s = "aabccccddd"
+#Output: 9
+#accdbdcca
+#*/
+#aaab
+#baaa
+#a = ""
+#length = 0
+#s = "aabccccddd"
+#a = "a"
+
+def palindromString(input):
+    inputString = []
+    maxCount = 0
+    
+    for character in range(0,len(input)):
+        inputString.append(input[character])
+        if inputString.reverse() == inputString:
+            maxCount = max(maxCount,len(inputString))
+            
+    
+    return maxCount
+        
+    
+    
+input = "aabccccddd"
+print(palindromString(input))
+
+
+
+
+
+Java Microservices is one of the hottest skills in the current job market ..
+
+Make sure you prepare answers to the below 20 questions before going for an interview 👇
+
+1. Monolith vs Microservices differences and when to choose which.
+
+2. How to design a microservice from scratch.
+
+3. API Gateway pattern and its advantages.
+
+4. Inter-service communication: REST vs Messaging.
+
+5. Circuit Breaker pattern and its implementation using Resilience4j.
+
+6. Load balancing in microservices using Spring Cloud Load Balancer.
+
+7. How Spring Cloud Config helps in centralized configuration management.
+
+8. Service discovery using Eureka or Consul.
+
+9. Feign Client vs WebClient: Which one to use and why.
+
+10. Event-driven architecture and Kafka integration.
+
+11. Database per service vs Shared Database: Pros and cons.
+
+12. Saga Pattern for distributed transactions in microservices.
+
+13. JWT-based authentication and OAuth2 in microservices.
+
+14. How to handle security in an API Gateway.
+
+15. Observability: Logging, tracing, and monitoring best practices.
+
+16. Role of Prometheus and Grafana in microservices monitoring.
+
+17. Kubernetes deployment strategies for microservices.
+
+18. Blue-Green and Canary deployments in microservices.
+
+19. When to use WebFlux for reactive microservices.
 
