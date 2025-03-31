@@ -1,0 +1,153 @@
+
+DP Questions
+𝗘𝗮𝘀𝘆 𝗟𝗲𝘃𝗲𝗹
+Best Time to Buy and Sell Stock
+Link: https://lnkd.in/gWKbYB_v
+
+House Robber
+Link: https://lnkd.in/gY7Dt59i
+
+Paint House
+Link: https://lnkd.in/gV-b3CMf
+
+𝗠𝗲𝗱𝗶𝘂𝗺 𝗟𝗲𝘃𝗲𝗹
+Unique Paths II
+Link: https://lnkd.in/gCkNFz-G
+
+Minimum Path Sum
+Link: https://lnkd.in/gXvjmUcR
+
+Decode Ways
+Link: https://lnkd.in/g9RqP39M
+
+Word Break
+Link: https://lnkd.in/g593pDKv
+
+Maximal Square
+Link: https://lnkd.in/g9PDbq7F
+
+Longest Increasing Subsequence
+Link: https://lnkd.in/gN56g7x4
+
+Coin Change
+Link: https://lnkd.in/g7RksUSp
+
+Can I Win
+Link: https://lnkd.in/g6m5uPSX
+
+Ones and Zeroes
+Link: https://lnkd.in/gUhFbkRX
+
+Longest Palindromic Subsequence
+Link: https://lnkd.in/gUam3AYz
+
+Partition to K Equal Sum Subsets
+Link: https://lnkd.in/gtDbaUQh
+
+Cheapest Flights Within K Stops
+Link: https://lnkd.in/gBT5uvgM
+
+Longest Arithmetic Sequence
+Link: https://lnkd.in/gn6-pZXs
+
+Last Stone Weight II
+Link: https://lnkd.in/gMynjRWf
+
+Filling Bookcase Shelves
+Link: https://lnkd.in/gWSjFSbA
+
+Longest Common Subsequence
+Link: https://lnkd.in/gHpvfBs4
+
+Dice Roll Sum
+Link: https://lnkd.in/gPRw9hmz
+
+𝗛𝗮𝗿𝗱 𝗟𝗲𝘃𝗲𝗹
+Longest Valid Parentheses
+Link: https://lnkd.in/gg2RHK6J
+
+Wildcard Matching
+Link: https://lnkd.in/g_46FSg6
+
+Edit Distance
+Link: https://lnkd.in/gptCDnyv
+
+Best Time to Buy and Sell Stock III
+Link: https://lnkd.in/g35_8sNq
+
+Burst Balloons
+Link: https://lnkd.in/gDXbX9PE
+
+Minimum Cost to Merge Stones
+Link: https://lnkd.in/g3865YDy
+
+Minimum Difficulty of a Job Schedule
+Link: https://lnkd.in/gRVDi4qw
+
+# → 2 Pointers on Arrays
+# Each one is a must-do:
+
+# - Merge Two 2D Arrays by Summing Values→https://lnkd.in/eXvrAqWb
+# - Merge Sorted Array→https://lnkd.in/eC3G62RG
+# - Sort Array by Parity→https://lnkd.in/eynqARXQ
+# - Sort Array by Parity II→https://lnkd.in/eK_QtUuv
+# - Rearrange Array Elements by Sign→https://lnkd.in/ek4BFtgT
+# - Remove Duplicates from Sorted Array→https://lnkd.in/e7deX-a5
+# - Remove Element→https://lnkd.in/e_GkgjCe
+# - Partition Array According to Given Pivot→https://lnkd.in/e5jEEbV6
+# - Rotate Array→https://lnkd.in/ewG8uGJg
+# - Apply Operations to an Array→https://lnkd.in/eji38k8D
+# - Find All K-Distant Indices in an Array→https://lnkd.in/eUqSKHkM
+# - Two Sum→https://lnkd.in/eaC5hfaa
+# - 3Sum→https://lnkd.in/eS4usEnF
+# - 3Sum Closest→https://lnkd.in/eVZJfjua
+# - 4Sum→https://lnkd.in/eduk3Tks
+# - Sort Colors→https://lnkd.in/eM7FTf3s
+# - Container With Most Water→https://lnkd.in/eNgDn4Ce
+# - Watering Plants II→https://lnkd.in/e5xujpGH
+# - Next Permutation→https://lnkd.in/eJry4e2n
+# - Next Greater Element III→https://lnkd.in/en23T757
+
+
+# → 2 Pointers on Strings
+# Don’t skip these either:
+
+# - Reverse String→https://lnkd.in/esmGPN6i
+# - Reverse Prefix of Word→https://lnkd.in/etVjF63e
+# - Reverse Vowels of a String→https://lnkd.in/eV43Q--K
+# - Reverse Words in a String→https://lnkd.in/eu2JSHUZ
+# - Reverse Words in a String III→https://lnkd.in/ewi34Qev
+# - Valid Palindrome→https://lnkd.in/e36HfMg3
+# - Valid Palindrome II→https://lnkd.in/e32MME4r
+# - Lexicographically Smallest Palindrome→https://lnkd.in/eaMF9tZa
+# - Merge Strings Alternately→https://lnkd.in/eAHxRwm5
+# - Largest Merge of Two Strings→https://lnkd.in/enrz8GRA
+# - Shortest Distance to a Character→https://lnkd.in/eXZbpUPz
+# - DI String Match→https://lnkd.in/e-j9qAHc
+# - Make String a Subsequence Using Cyclic Increments→https://lnkd.in/e8uQvFG2
+# - Count Binary Substrings→https://lnkd.in/ewKQy_GF
+# - Minimum Length of String After Deleting Similar Ends→https://lnkd.in/etXGbT7f
+# - String Compression→https://lnkd.in/e58HVg8S
+# - Separate Black and White Balls→https://lnkd.in/euuvp_Ey
+# - Move Pieces to Obtain a String→https://lnkd.in/ebqBUCUG
+# - Sentence Similarity III→https://lnkd.in/eGUuqmsEs
+
+
+
+Coding Problem:
+- I was given a LLD problem where I needed to implement two entities:
+a) Rectangle
+With Dimensions: Length and Breadth
+With Methods:
+- getArea() → returns area (Length * Breadth)
+- getPerimeter() → returns perimeter 2 * (Length + Breadth)
+
+b) Square
+With Dimension: Side
+With Methods:
+- getArea() → returns area (Side * Side)
+- getPerimeter() → returns perimeter 4 * Side
+
+🌀 I was asked to implement a generic shape function to return the corresponding object based on type ("rectangle" or "square"), with proper error handling for invalid types.
+
+✨ I structured the solution using simple factory functions, one for each shape, ensuring method checks (getArea, getPerimeter) were handled for errors before returning the object.

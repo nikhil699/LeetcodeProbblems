@@ -10,22 +10,24 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+
         # using sliding window technique
-
-        uniqueString = set()
+        count = {}
         left = 0
-        maxSize = 0
-        for i in range(0,len(s)):
-            while s[i] in uniqueString:
-                uniqueString.remove(s[left])
-                left += 1
-            uniqueString.add(s[i])
-            maxSize = max(maxSize,i - left + 1)
+        maxSubstringLength = 0
 
+        for right in range(0,len(s)):
+            char = s[right]
+            count[char] = count.get(char,0)+1
+
+            while count[char] > 1:
+                count[s[left]] -= 1
+                left += 1
+
+            maxSubstringLength = max(maxSubstringLength, right - left +1)
         
-        print(uniqueString)
-        
-        return maxSize
+        return maxSubstringLength
+
 
 s = "abcabcbb"
 sol = Solution()
