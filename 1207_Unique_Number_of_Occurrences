@@ -1,0 +1,22 @@
+class Solution(object):
+    def uniqueOccurrences(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: bool
+        """
+        frequency = {}
+
+        for item in range(0,len(arr)):
+            if arr[item] not in frequency:
+                frequency[arr[item]] = 0
+            else:
+                frequency[arr[item]] += 1
+        
+        
+        
+        return len(frequency.values()) == len(set(frequency.values()))
+
+sol = Solution()
+
+arr = [1,2,2,1,1,3]
+print(sol.uniqueOccurrences(arr))

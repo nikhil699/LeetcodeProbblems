@@ -1,0 +1,34 @@
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack = []
+        bracket_map = {')': '(', '}': '{', ']': '['}
+
+        for char in s:
+            if char in bracket_map:
+                result = stack.pop() if stack else '#'
+
+                if bracket_map[char] != result:
+                    return False
+
+            else:
+                stack.append(char)
+
+        if not stack:
+            return True
+        else:
+            return False
+        
+s = "()[]{}"
+s2 = "]"
+s3 = "("
+s4 = "()]][]"
+sol = Solution()
+
+print(sol.isValid(s2))
+
+      
+

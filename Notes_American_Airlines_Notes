@@ -1,0 +1,22 @@
+(1) knowledge about docker and kubernates
+do you having any experience with writing the deploying.yaml file
+
+
+(2) experiences with the no SQL DATABESES / No SQL DATABASES
+
+
+(3) so your team is developing a microservices based application and there is an requirement to implement cross cotting concern so how we are going to maintain cross cutting concern and how many types of crooss cutting concern
+what is the use of cross cutting concerns.
+
+
+(4) suppose your team is deploying a microservices into production and there is need to implement circuit breaker pattern so may be you need to handle the failures and after failures what you are going to do.
+so there is how many retry mechnaism and how we are going to apply retry mechnism
+there is concept odf half open and half closed
+
+
+(5) so normally your teams needs to implement a multi tenancy architehture in a spring applicattion to support multiple clients with a isloted data and a configuration as well
+so how would you design and implement a multi tenancy solution.
+databases seperate, configuration files ( in terms of coding )
+Example : Policybazar
+
+(6) 

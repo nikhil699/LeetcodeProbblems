@@ -6,6 +6,7 @@ class Solution(object):
         :rtype: int
         """
         boxTypes.sort(key=lambda x: -x[1])
+        print(boxTypes)
         total_units = 0
 
         for item, size in boxTypes:

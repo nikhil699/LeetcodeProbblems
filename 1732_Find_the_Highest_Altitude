@@ -1,0 +1,22 @@
+class Solution(object):
+    def largestAltitude(self, gain):
+        """
+        :type gain: List[int]
+        :rtype: int
+        """
+        heighestAltitude = 0
+        maxAltitude = 0
+
+        for altitude in range(0,len(gain)):
+            heighestAltitude = heighestAltitude + gain[altitude]
+
+            maxAltitude = max(maxAltitude, heighestAltitude)
+
+        return maxAltitude
+
+
+
+gain = [-5,1,5,0,-7]
+sol = Solution()
+
+print(sol.largestAltitude(gain))

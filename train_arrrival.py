@@ -11,7 +11,6 @@
 def countStation(arr,dep):
 
     sizeOfArrival = len(arr)
-    sizeOfDeparture = len(dep)
     mergedArray = []
 
     for i in range(0,sizeOfArrival):
@@ -19,9 +18,7 @@ def countStation(arr,dep):
         mergedArray.append((dep[i],"D"))
 
     countStation = 1
-    print(mergedArray)
     mergedArray.sort()
-    print(mergedArray)
     result = 1
 
     for i in range(0,len(mergedArray)):

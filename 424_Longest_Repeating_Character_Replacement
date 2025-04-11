@@ -1,0 +1,54 @@
+# 1. Time Complexity:
+# Heap Operations: heapq.heappush() worst case mein O(log k) hota hai, aur yeh har iteration mein chal raha hai.
+
+# Loop Over String (O(N)): Har character ek baar process ho raha hai, toh loop O(N) chalega.
+
+# 👉 Total Time Complexity: O(N log 26) ≈ O(N) (since log 26 ek constant hai)
+
+# 2. Space Complexity:
+# Heap: Worst case mein heap mein har unique character store ho sakta hai, jo max O(26) ≈ O(1) hoga.
+
+# Counter Dictionary: Yeh bhi max 26 keys store karega, toh O(1) space lega.
+
+# 👉 Total Space Complexity: O(1) (fixed number of characters)
+
+
+
+
+from collections import Counter
+import heapq
+
+class Solution(object):
+    def characterReplacement(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        "AABABBA"
+        maxheap = []
+        left = 0
+        maxLength = 0
+        counter = Counter()
+
+        for right in range(0,len(s)):
+            counter[s[right]] += 1
+
+            heapq.heappush(maxheap, (-counter[s[right]],s[right]))
+
+            while (right-left+1) - (-maxheap[0][0]) > k:
+                counter[s[left]] -= 1
+                left += 1
+
+
+            maxLength = max(maxLength , right - left + 1)
+        
+        return maxLength
+
+
+s = "AABABBA"
+k = 1
+
+sol = Solution()
+
+print(sol.characterReplacement(s,k))

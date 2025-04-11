@@ -1,0 +1,26 @@
+class Solution(object):
+    def pivotIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        leftSum = 0
+       
+        rightSum = sum(nums)
+      
+
+        for item in range(0,len(nums)):
+            leftSum = leftSum + nums[item]
+            if leftSum == rightSum:
+                return item
+            
+            rightSum = rightSum - nums[item]
+          
+        
+        return -1
+
+        
+nums = [1,7,3,6,5,6]
+sol = Solution()
+
+print(sol.pivotIndex(nums))
