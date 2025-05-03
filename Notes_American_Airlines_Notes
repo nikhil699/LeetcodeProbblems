@@ -1,12 +1,119 @@
+𝐚𝐬𝐲 - 
+• How is String immutable in Java? 
+• What is a functional interface? 
+• Can a constructor be private? 
+• Which approach is better and why? 
+ • String str = "Hello"; OR 
+ • String str = new String("Hello"); 
+• What is an anonymous class?
+
+𝐌𝐞𝐝𝐢𝐮𝐦 -
+ 
+• Where is a String stored in memory? 
+• Is it necessary for an abstract class to have at least one abstract method? 
+• Does 𝐜𝐨𝐧𝐜𝐚𝐭𝐞𝐧𝐚𝐭𝐢𝐨𝐧 create a new String? If yes: 
+ • What happens to the old String objects? 
+ • Can they cause memory issues? 
+• Why do we use 𝐚𝐛𝐬𝐭𝐫𝐚𝐜𝐭 𝐜𝐥𝐚𝐬𝐬𝐞𝐬? 
+• Can we instantiate a class containing an abstract method? 
+• How to create an object of a class with a 𝐩𝐫𝐢𝐯𝐚𝐭𝐞 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐨𝐫?
+
+𝐇𝐚𝐫𝐝 - 
+ 
+• How to create an 𝐢𝐦𝐦𝐮𝐭𝐚𝐛𝐥𝐞 𝐜𝐥𝐚𝐬𝐬 in Java? 
+• How to implement a 𝐒𝐢𝐧𝐠𝐥𝐞𝐭𝐨𝐧 𝐜𝐥𝐚𝐬𝐬? What are its real-world applications? 
+• Can we define methods in an interface? If yes, how? 
+• What is a 𝐥𝐚𝐦𝐛𝐝𝐚 𝐞𝐱𝐩𝐫𝐞𝐬𝐬𝐢𝐨𝐧, and why is it used? 
+• What is the difference between 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐛𝐥𝐞 and 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐭𝐨𝐫? 
+• What are the key features of Java 8? 
+• Which provides complete abstraction and why? 
+ • Abstract class 
+ • Interface 
+• What happens if the 𝐫𝐮𝐧() method is called directly on a running thread? 
+• What is the purpose of a 𝐝𝐚𝐞𝐦𝐨𝐧 𝐭𝐡𝐫𝐞𝐚𝐝?
+
+
+You might fail your next Java interview — not because you don't know the concepts... but because you didn’t expect these questions.
+
+I walked into a Spring Boot interview last year feeling confident.
+
+5 years of experience. Dozens of services built but still got stuck. 
+ 
+They were about real-life scenarios. 
+The kind you only learn when you’ve been burned in production.
+
+Here are medium-level scenario-based Java + Spring Boot questions that come up way more often than you'd expect — and can trip up even experienced developers:
+
+1. How would you debug a memory leak in a Spring Boot microservice? 
+
+Hint: They want more than "check the logs.
+Talk about heap dumps, analyzing with tools like VisualVM, finding large collections or caches that never get cleared.
+
+2. What happens if one `@Transactional` method calls another `@Transactional` method in the same class? 
+
+Spoiler: The second transaction may be ignored because of Spring's proxy-based AOP. They want to know if you understand self-invocation issues.
+
+3. You added caching with `@Cacheable`, but it's not working. What could go wrong?
+
+This is about Spring's proxy mechanism again. 
+Common issues: method is `private`, called internally, or caching is misconfigured.
+
+4. How do you handle circular dependencies in Spring?
+
+They want to know your strategies — using setter injection, `@Lazy`, or refactoring design to break the cycle.
+
+5. A REST API intermittently fails with 500 errors under load. How do you find and fix it?
+
+Think like an SRE: thread dumps, analyze logs, look for blocking code, DB bottlenecks, connection pool exhaustion, etc.
+
+6. Your scheduled task in Spring Boot doesn’t run. Why?
+
+Missed `@EnableScheduling`? Running as a non-bean? Wrong cron? 
+These questions test if you actually used these annotations — not just read about them.
+
+7. What happens when you use `@Autowired` on a field vs constructor vs setter?
+
+This isn't just preference — it's about testability, immutability, and control over injection.
+
+
+
 (1) knowledge about docker and kubernates
 do you having any experience with writing the deploying.yaml file
+Why kafka better than RabbitMQ
+https://www.linkedin.com/posts/rajya-vardhan_i-asked-50-software-engineers-this-question-activity-7316095811119902720-rLR9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
 
-
+https://www.linkedin.com/posts/nitin-naliyadhara-307853192_interested-remotework-frontenddev-activity-7313150748022726657-bnjn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
 (2) experiences with the no SQL DATABESES / No SQL DATABASES
 
 
+https://www.design.com/maker/logo/b5c1a508-7ca7-4fc5-a490-4099a1bb66f4/draft/4fd546d4-3160-477c-aaab-7c89a2dcf841
+I want to take on new challenges that allow me to expand my skills, work on diverse projects, and contribute to impactful solutions.
+Output Based Question
+4:09 SQL question
+5:28 Use of default keyword vs default method
+6:23 How to create Custom Exception
+7:49 PUT vs Patch
+8:43 Path Param vs Query Param
+10:30 @JsonIgnore vs @Transient
+11:56 @Controller vs @RestController
+12:40 How to provide Role based authentication
+14:22 Authentication vs Authorization
+16:35 Unique vs Composite Key
+18:36 @Mock vs @InjectMocks
+20:20 verify() in mockito
+21:17 map vs flat map
+24:05 Use of @JoinColumn
+25:15 select selected columns in JPA
+26:48 Use of Kubernetes
+https://www.linkedin.com/posts/satish-gojarate-a0815519_java-backend-jobs-activity-7321975761169436674--Dvu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+
+http://youtube.com/shorts/JpN_EA94GLM
+
 (3) so your team is developing a microservices based application and there is an requirement to implement cross cotting concern so how we are going to maintain cross cutting concern and how many types of crooss cutting concern
 what is the use of cross cutting concerns.
+
+
 
 
 (4) suppose your team is deploying a microservices into production and there is need to implement circuit breaker pattern so may be you need to handle the failures and after failures what you are going to do.
@@ -14,9 +121,225 @@ so there is how many retry mechnaism and how we are going to apply retry mechnis
 there is concept odf half open and half closed
 
 
+
+
 (5) so normally your teams needs to implement a multi tenancy architehture in a spring applicattion to support multiple clients with a isloted data and a configuration as well
 so how would you design and implement a multi tenancy solution.
 databases seperate, configuration files ( in terms of coding )
+multiple datases how you are going to configure and then access
 Example : Policybazar
 
-(6) 
+
+
+
+
+(6) in your application what is the authentication and authorization you are using (JWT Token).what is the mean of refresh token when you are going to do refresh token.
+just think you are doing some work and yoiur token got expire and then sequency may not work beacuse token got expire so how you handle this for example you are going to call third party service subsequently request you are sending beacuse comming from your application so in between the token got expire by third party service so you are in middle so the next request you are sending and token got expire.
+suppose you are doing some payment and token got expire and is this being a correct way so may be our user got frustated because of this.
+so what is the solution for this ?
+its take thirty sec for everyone its a global issue 
+
+
+
+
+
+
+(7) so normally in your application implememnt just a multithreaded to the performance and  responsivness and how we are going to do , how we are design your application to avoid the race condition.
+Race Condion : when several request try to access the same resurces at a time.
+
+Completable future and callable function ( what is the meaning of this completable future ).
+
+
+
+
+
+
+(8) elastic load balancing in AWS . what is the functionality of elastic load balancing.
+
+
+
+
+
+
+(9) what is the mean of idempotent in the rest API.
+what are the HTTP methods which support idempotent and not support.
+
+
+
+
+
+
+(10) in which situation we use SQL nad No SQL.
+cant we store blob, images, document in the SQL databases.
+how we are going to handle the kind of relationship with no SQL suppose employe Department data and employee based onthe department inside No SQL. 
+how we are going to handle relationship among entities in No SQL.
+
+
+
+
+(11) imagine you have a machine learning model deploy in kubernates and the work load incresing significatly how to scale the deployment to handle the increse load.
+increse the instances.
+increse in the pods different pods
+
+
+
+
+(12) how many types of scaling.(vertical and Horizontal Scaling).
+
+
+
+
+
+If you're preparing for backend roles, start here:
+
+∟■ Java Core Concepts
+- Primitive Data Types 
+- Encapsulation 
+- Method Overloading vs Overriding 
+- Exception Handling 
+- Lambda expressions 
+- `==` vs `.equals()` 
+- Static, final, constructors, singleton pattern 
+
+(Also, I’ve recently launched my Java Kit, which has everything you need to prepare for Java-based roles in 2025.
+
+✅ Java fundamentals
+✅ Spring Boot, Hibernate, Security
+✅ Frontend + DB integration
+✅ DevOps, Testing & Machine Coding
+
+Check it out here:https://bit.ly/44hy3vc)
+
+∟■ Collections & Generics
+- ArrayList, HashMap, HashSet 
+- Sorting with Comparator 
+- Generics & Wildcards 
+- Immutability 
+
+∟■ JVM & Memory
+- Garbage Collection 
+- Stack vs Heap 
+- Memory leaks 
+- Finalization 
+- ClassLoaders 
+
+∟■ OOP & Design Patterns
+- Singleton 
+- Factory 
+- Builder 
+- Immutability 
+- Thread safety 
+
+∟■ Spring Boot Essentials
+- REST APIs with `@RestController` 
+- JPA & Hibernate: Entity, Repository, Service layer 
+- Spring Security Basics (HTTP Basic, JWT) 
+- Exception Handling with `@ControllerAdvice` 
+- Profiles (`application-dev.yml`, etc.) 
+
+∟■ Testing
+- JUnit 
+- Integration testing with `TestRestTemplate` 
+- MockMVC 
+- Mockito basics 
+
+∟■ Real-World Skills
+- Git + GitHub flow 
+- CI/CD concepts 
+- Build tools: Maven/Gradle 
+- Caching with `@Cacheable` 
+- Monitoring with Spring Boot Actuator 
+
+
+Index DBs to optimize reads
+- Shard SQL for horizontal scaling
+- Auto-scale to handle traffic spikes
+- Use CDNs to reduce global latency
+- No perfect solution—only trade-offs
+- Assume failures—build fault tolerance
+- Async processing for non-urgent tasks
+- Write-through cache for write-heavy apps
+- Heartbeats & health checks detect failures
+- Circuit breakers prevent cascading failures
+- Denormalize DBs for read-heavy workloads
+- Prefer microservices over monoliths for scale
+- Read-through cache boosts read-heavy apps
+- Event-driven architecture decouples components
+- Avoid over-engineering—add features when needed
+- Use API versioning to manage backward compatibility
+- Optimize database queries to avoid N+1 query problems
+- Use distributed tracing for monitoring and debugging microservices
+- Apply schema evolution strategies to handle DB migrations smoothly
+- Leverage gRPC for efficient, high-performance service communication
+- Implement database connection pooling to optimize resource usage
+- Monitor and log everything—observability is key for debugging
+- Design for eventual consistency in distributed systems
+- Define functional & non-functional requirements first
+- Replication & redundancy enhance fault tolerance
+- Use feature flags for safe and controlled rollouts
+- Rate limiting prevents overload & DoS attacks
+- Websockets enable real-time communication
+- SQL for structured data & ACID compliance
+- Message queues enable async processing
+- Load balancers improve traffic distribution
+- Partition & shard data for large datasets
+- Data lakes & warehouses for analytics
+- API gateways simplify microservices
+- Prefer horizontal scaling for growth
+- Blob storage is best for media files
+- Idempotency simplifies retry logic
+- NoSQL suits unstructured data
+- Design clear, secure APIs
+
+
+As a Microservices developer,
+
+Please learn:
+
+1. Microservices Architecture Basics: Monolithic vs. Microservices, characteristics (independence, scalability, resilience), and designing microservices boundaries (DDD - Domain-Driven Design).
+
+2. Service Communication: Synchronous (REST, gRPC) vs. Asynchronous (Message Queues), API design and versioning, event-driven architecture, and event sourcing.
+
+3. Data Management: Database per service, distributed data management (saga pattern, 2PC, CQRS), and handling data consistency across services.
+
+4. Deployment Strategies: Containerization (Docker), orchestration (Kubernetes), and service discovery and registry (Eureka, Consul).
+
+5. Frameworks and Tools: Spring Boot (Spring Cloud for microservices), Micronaut, Quarkus, or Dropwizard as alternatives.
+
+6. Communication Protocols: RESTful APIs and gRPC, messaging systems (Kafka, RabbitMQ).
+
+7. Databases: SQL (PostgreSQL, MySQL), NoSQL (MongoDB, Cassandra), and distributed caching (Redis, Memcached).
+
+8. CI/CD Pipelines: Tools like Jenkins, GitHub Actions, GitLab CI, and deployment strategies like Blue-Green and Canary deployments.
+
+9. Infrastructure as Code: Terraform, Ansible, or AWS CloudFormation.
+
+10. Logging and Monitoring: Centralized logging (ELK Stack, Splunk) and monitoring tools (Prometheus, Grafana).
+
+11. Resilience and Fault Tolerance: Circuit Breaker (Hystrix, Resilience4j), Bulkhead pattern, and retries.
+
+12. Security: OAuth2, OpenID Connect, and API Gateways (Zuul, Spring Cloud Gateway, Kong).
+
+13. Testing Microservices: Unit and integration testing, contract testing (Pact), and end-to-end testing.
+
+14. Scalability Patterns: Horizontal and vertical scaling, load balancing (HAProxy, NGINX).
+
+15. Distributed Tracing: Tools like Jaeger and Zipkin.
+
+16. Anti-Patterns: Avoiding distributed monoliths and over-engineering microservices.
+
+
+HLD: Design a chat system for the Amazon returns team. Here a bot can respond to customers using a predefined workflow and if the customer reaches the end of the bot workflow, then allow an option to chat with a live Amazon returns agent. The customer can add photos and videos to the chat. Considering agents are working from home and an agent goes offline, new agents should see chat history immediately.
+
+We used the invisionapp website for the design diagram, and I did well on this round. My tips for acing the HLD: Have a structured approach and be open to suggestions. Something like:
+
+Start with estimation.
+Make assumptions and decide scope.
+Come up with a very high-level design
+Later, discuss individual components in more detail.
+
+And some tips:
+
+Make sure you are properly communicating your rationale behind every tech decision. Like why use web sockets over long polling? Or why do we choose No-SQL over SQL DB?
+Make sure you discuss limitations and bottlenecks and a plan to avoid those if required.
+Ask for frequent feedback explicitly and ask if anything specific needs to be discussed before moving on to the next component. And many more, stay tuned for a blog around this.
