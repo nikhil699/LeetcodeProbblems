@@ -1,5 +1,51 @@
 <!-- https://www.linkedin.com/posts/sumitlad_if-i-travel-back-to-when-i-started-preparing-activity-7300235060853518336-N8cT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc -->
 
+
+
+
+
+
+𝐚𝐬𝐲 - 
+• How is String immutable in Java? 
+• What is a functional interface? 
+• Can a constructor be private? 
+• Which approach is better and why? 
+ • String str = "Hello"; OR 
+ • String str = new String("Hello"); 
+• What is an anonymous class?
+
+𝐌𝐞𝐝𝐢𝐮𝐦 -
+ 
+• Where is a String stored in memory? 
+• Is it necessary for an abstract class to have at least one abstract method? 
+• Does 𝐜𝐨𝐧𝐜𝐚𝐭𝐞𝐧𝐚𝐭𝐢𝐨𝐧 create a new String? If yes: 
+ • What happens to the old String objects? 
+ • Can they cause memory issues? 
+• Why do we use 𝐚𝐛𝐬𝐭𝐫𝐚𝐜𝐭 𝐜𝐥𝐚𝐬𝐬𝐞𝐬? 
+• Can we instantiate a class containing an abstract method? 
+• How to create an object of a class with a 𝐩𝐫𝐢𝐯𝐚𝐭𝐞 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐨𝐫?
+
+𝐇𝐚𝐫𝐝 - 
+ 
+• How to create an 𝐢𝐦𝐦𝐮𝐭𝐚𝐛𝐥𝐞 𝐜𝐥𝐚𝐬𝐬 in Java? 
+• How to implement a 𝐒𝐢𝐧𝐠𝐥𝐞𝐭𝐨𝐧 𝐜𝐥𝐚𝐬𝐬? What are its real-world applications? 
+• Can we define methods in an interface? If yes, how? 
+• What is a 𝐥𝐚𝐦𝐛𝐝𝐚 𝐞𝐱𝐩𝐫𝐞𝐬𝐬𝐢𝐨𝐧, and why is it used? 
+• What is the difference between 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐛𝐥𝐞 and 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐭𝐨𝐫? 
+• What are the key features of Java 8? 
+• Which provides complete abstraction and why? 
+ • Abstract class 
+ • Interface 
+• What happens if the 𝐫𝐮𝐧() method is called directly on a running thread? 
+• What is the purpose of a 𝐝𝐚𝐞𝐦𝐨𝐧 𝐭𝐡𝐫𝐞𝐚𝐝?
+
+
+
+
+
+
+
+
 https://www.linkedin.com/posts/sumitlad_if-i-was-hiring-you-as-a-software-engineer-activity-7302035254523961345-3s0G?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
 
 Top 20 System Design Concepts You Should Know
