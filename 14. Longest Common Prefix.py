@@ -28,3 +28,18 @@ sol = Solution()
 strs = ["flower","flow","flight"]
 
 print(sol.longestCommonPrefix(strs))
+
+
+
+
+
+Design Round question:
+
+Design a ticket booking system for movies. For example: bookmyshow
+Functionality to be implemented:
+● Search movie(by name, by theatre name)
+● Book ticket
+● Cancel ticket
+● List upcoming movies
+I was told to write first human interfaces,not any language specific just human interface then I was told to 
+design DB and freedom to choose any db, and then he found mistakes in each table.
