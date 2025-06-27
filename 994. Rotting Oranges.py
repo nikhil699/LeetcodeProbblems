@@ -1,3 +1,12 @@
+# # Approach : i have to chcke and store the rotten oranges and fresh oranges and do BFS in all the node having 
+# rotten oranges means having value as 2 and check thier neighbour and if find any fresh ornges is thier makes it as 
+# rotten and store the count for doing this and at the end after all tranversal if any index having fresh oranges o 
+# will return -1 otherwise return number of steps
+# | Metric    | Complexity |
+# | --------- | ---------- |
+# | **Time**  | O(m × n)   |
+# | **Space** | O(m × n)   |
+
 from collections import deque
 class Solution(object):
     def orangesRotting(self, grid):

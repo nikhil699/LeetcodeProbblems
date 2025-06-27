@@ -33,7 +33,7 @@ class Solution:
             return True 
 
         for node in range(0,numCourses):
-            if not dfs(node):
+            if dfs(node):
                 return False
         return True
         

@@ -4,6 +4,10 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# if i am standing at any node and i know the left height and right height then i will tell the diameter of that node as same i 
+# will find for each node and update the max diameter from the specific node at last i will return that.
+
 class Solution(object):
     def diameterOfBinaryTree(self, root):
         """

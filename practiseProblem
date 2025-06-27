@@ -1,0 +1,27 @@
+# given a binary tree in this tree each node contain a integer value >= 0 we have to find the maximum sum of node from 
+# the tree where no to directly linked node is selected
+# 1 -- 2 (left) -- 3 (Right)
+# 2 -- 4 (left) -- 5(right)
+# 3 -- 6 (left) -- 7 (right)
+# Expected = 1+4+5+6+7 = 23
+
+
+
+
+
+
+# array of numbers and you have to find the next greatest number after the current in the array
+# Exmple 
+# nums = [1, 7, 6, 7] output = 1,7,7,6 if no heigher number is ther in the array then return least one.
+# 7761
+
+# nums = [1 , 4, 5, 8]
+# 1485
+# 1548
+# 1584
+# 1845
+
+def calculateSumOfTree():
+
+
+
