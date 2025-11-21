@@ -1,5 +1,5 @@
-#  Worst Case: O(N*M) (due to BFS queue storage).
-# Timecomplexity : 0(n*m)
+# Worst Case: O(N + M) (due to BFS queue storage).
+# Time Complexity : 0(N + M)
 
 from collections import deque
 class Solution(object):

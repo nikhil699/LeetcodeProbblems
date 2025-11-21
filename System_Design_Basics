@@ -1,4 +1,278 @@
 Read all of them to build strong basics:
+
+
+https://www.linkedin.com/posts/abhishek-malviya-192457152_dsa-codinginterview-problemsolving-activity-7361362147617988608-xel8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+
+Absolutely! Here’s a single LinkedIn-ready post combining your entire *System Design MUST SOLVE LIST in the same format with crisp sections and clean mature language.
+
+
+
+Round 1: Coding + Core Java + Spring Boot
+Coding Problem:
+Find the minimum number of meeting rooms required (classic interval scheduling problem).
+Java & Spring Boot Questions:
+Serialization vs Deserialization
+Java 8 features (Streams, Lambdas, Optional, etc.)
+Design Patterns I’ve used in real projects
+Singleton (Lazy, Eager, Double-Checked Locking, Enum-based)
+Factory vs Strategy
+Multithreading: Futures & Executors
+REST APIs: @PostMapping vs @PutMapping
+
+Round 2: System Design + Databases
+An array manipulation kind of Java code
+Database Fundamentals:
+SQL vs NoSQL
+Constraints in SQL (Primary vs Unique Key)
+CAP Theorem explained
+Scaling with Large Data (Millions of Rows):
+Optimizations: Indexing, Partitioning/Sharding
+Caching techniques + handling cache eviction/full cache scenarios
+Server-side data handling strategies
+Master-Slave Database setup
+Consistent Hashing for Distributed Systems
+
+
+
+1. Read-Heavy Systems
+
+► Design a URL Shortener
+∟ Focus on: key generation, collisions, DB/caching, sharding
+
+► Design an Image Hosting Service
+∟ Focus on: object storage, CDN, deduplication, resizing
+
+► Design a Social Platform(Twitter/Facebook)
+∟ Focus on: posts, timelines, denormalized storage, sharding
+
+► Design a NewsFeed System
+∟ Focus on: push vs pull, fanout, ranking, pagination
+
+2. Write-Heavy Systems
+
+► Design a Rate Limiter
+∟ Focus on: token/leaky bucket, Redis, TTL
+
+► Design a Log Collection/Analysis System
+∟ Focus on: Kafka, ELK, partitioning, real-time query
+
+► Design a Voting System
+∟ Focus on: idempotency, fraud prevention, real-time aggregation
+
+► Design a Trending Topics System
+∟ Focus on: count-min sketch, sliding window, ranking
+
+3. User-Facing Apps & Social Systems
+
+► Design a Blogging Platform
+∟ Focus on: data modeling, feed generation, access control
+
+► Design OnePic(PhotoApp)
+∟ Focus on: media storage, timelines, user-generated content
+
+► Design Photo Tagging
+∟ Focus on: graph relationships, image search
+
+► Design HashTag Service
+∟ Focus on: real-time indexing, trending detection
+
+► Design User Affinity
+∟ Focus on: collaborative filtering, scoring models
+
+4. Search, Messaging, and Delivery
+
+► Design a Word Dictionary
+∟ Focus on: trie, prefix lookups
+
+► Design a Text-Based Search Engine
+∟ Focus on: tokenization, inverted index, ranking
+
+► Design SQL-backed Message Broker
+∟ Focus on: durability, ordering, delivery semantics
+
+► Design a Distributed Task Scheduler
+∟ Focus on: idempotency, retries, time-based triggering
+
+► Design Recent Searches Service
+∟ Focus on: LRU cache, user isolation
+
+5. Streaming, Sync, and Media
+
+► Design a Video Processing Pipeline
+∟ Focus on: batch vs real-time, encoding
+
+► Design Airline Check-in
+∟ Focus on: concurrency, seat allocation, time-based locking
+
+► Design Remote File Sync Service
+∟ Focus on: delta sync, conflict detection, versioning
+
+► Design Text-based Cricket Commentary
+∟ Focus on: event streaming, real-time engagement
+
+► Design “Who’s Near Me” Service
+∟ Focus on: location sharding, frequent geo updates
+
+
+6. Strong Consistency Systems
+
+► Design Online Ticket Booking
+∟ Focus on: locking, concurrency, seat/payment flows
+
+► Design an E-Commerce Website
+∟ Focus on: catalog, cart, order, consistency, idempotency
+
+► Design an Online Messaging App
+∟ Focus on: message queue, receipts, scaling chat infra
+
+► Design a Task Management Tool
+∟ Focus on: CRUD, auth, assignment, background jobs
+
+If you're targeting SDE-2+ roles or trying to build scalable systems from scratch, this is where you need to focus.
+
+These questions, categorised based on Read-Heavy and Write-Heavy systems are a must-solve before your next Senior-Level interview at top PBCs like MAANG-M (plus there’s notes on what each question really evaluates) 👇
+
+🔸 Read-Heavy Systems
+These test your ability to scale while minimizing latency and handling high read loads.
+
+1. Design a URL Shortener (Bitly)
+→ Focus: unique ID generation, collision handling, database schema
+→ Scale tips: add caching, rate limits, DB sharding
+
+2. Design an Image Hosting Service
+→ Focus: object storage (S3/GCS), CDN, image deduplication
+→ Add: thumbnail generation, access control, rate limiting
+
+3. Design a Social Media Platform (Twitter/Facebook)
+→ Focus: posts, timelines, user relationships (follows/friends)
+→ Scale tips: denormalized storage, fanout logic, partitioning strategy
+
+4. Design a NewsFeed System (Advanced)
+→ Focus: push vs pull models, ranking logic, user-specific feeds
+→ Add: caching layers, pagination, handling spikes in traffic
+
+🔸 Write-Heavy Systems
+These systems test your durability, ingestion speed, real-time processing, and consistency trade-offs
+
+1. Rate Limiter
+→ Token Bucket or Leaky Bucket algorithm
+→ Redis counters, TTLs, and circuit breakers
+
+2. Log Collection & Analysis System
+→ Kafka for ingestion, ELK stack for processing
+→ Discuss buffering, partitions, and real-time querying
+
+3. Voting System
+→ Handle duplicate votes, ensure idempotency
+→ Design for real-time vs eventual aggregation
+
+4. Trending Topics System
+→ Count-min sketch for approximations
+→ Use sliding window techniques and ranking models
+
+
+
+
+HLD : Build  a hotel Search and booking system.
+
+Just had one of the toughest microservices interviews of my career.
+It wasn’t about writing @RestController — it was about real-world architecture, scalability, and resilience.
+
+Here are some advanced questions I faced (and you might too):
+
+🔹 Distributed Caching: How would you design a caching strategy across multiple services to prevent stale data?
+
+🔹 Saga Pattern: Can you explain how you’d implement orchestration vs. choreography for long-running transactions?
+
+🔹 Event-Driven Architecture: How do you ensure exactly-once processing in Kafka (or similar message brokers)?
+
+🔹 API Gateway Challenges: How do you handle rate limiting, request throttling, and security policies at scale?
+
+🔹 Data Partitioning: How would you design a sharded database strategy for millions of requests per day?
+
+🔹 Service Mesh: Why use a service mesh (like Istio/Linkerd) over traditional load balancers and what trade-offs come with it?
+
+🔹 Observability: How do you implement distributed tracing (Jaeger/Zipkin) and connect it with metrics (Prometheus/Grafana) for debugging latency issues?
+
+🔹 Resiliency Testing: How do you approach chaos engineering in microservices? Any real example you tried?
+
+🔹 Deployment Strategies: Compare Blue-Green vs. Canary deployments — when would you pick one over the other?
+
+
+
+
+
+🚀My Interview Experience
+
+I recently attended an interview for a Java Backend Developer position at one of the companies.
+The process was quite structured and covered multiple technical areas across different rounds.
+Here’s a detailed list of actual interview questions asked during each round 👇
+
+
+🔹 1st Round – Technical Discussion
+_________________________________________
+
+1. Introduce yourself and explain your project.
+2. What is Fetch Type (Lazy vs Eager Loading)?
+3. Explain and implement the Factory Design Pattern (with some modifications).
+4. What is JWT security, and how have you used it in your project?
+5. What do you know about ISO8583?
+6. Difference between IOC and Dependency Injection
+7. What is Dependency Injection and its types?
+
+🔹 2nd Round – Coding
+_________________________________________
+
+1. 5 MCQs on Spring Boot
+2. Modify and improve the given code
+3. Find the second highest number in an array
+4. Find a file in a subdirectory
+
+🔹 3rd Round – Advanced Technical
+_________________________________________
+
+1. How have you used Spring Security in your project?
+2. What is a Spring Boot profile, and how did you use it?
+3. What is exception handling, and what is an advisor?
+4. How does the @Transactional annotation work?
+5. Explain microservices architecture
+6. What is Kafka and how have you implemented it?
+7. Explain design patterns
+8. What are Java 8 features?
+9. How did you implement scheduling in your project?
+10. How can we create an Optional of an employee object?
+
+
+
+
+
+
+
+
+https://www.linkedin.com/posts/systemdesignengineer_system-design-engineer-weekly-recap-activity-7354463819693264896-H9pA?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
+
+Here’s one of the practical questions they might throw at you:
+“How would you design a distributed backup system that avoids backing up the same data again and again?”
+
+Think beyond basics:
+ ✅ Use content-defined chunking — smartly split files to detect small changes
+ ✅ Generate fingerprints (hashes) to identify duplicate chunks
+ ✅ Store unique chunks only once across all backups
+ ✅ Build scalable indexing — maybe using bloom filters or sharded stores
+
+All to ensure storage efficiency without sacrificing recovery speed.
+
+But let’s talk trade-offs —
+ What happens if two backup jobs hit the same file at the same time?
+ ❓ Do you lock writes?
+ ❓ Go lock-free but clean up later?
+
+Rubrik interviews often explore these edge cases — your choices and your fallbacks.
+
+So...
+
+
 https://www.linkedin.com/posts/nikhilpandey-849814179_paytm-interview-experience-backend-developer-activity-7316886961187667968-SiyE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc
 1. Latency vs Throughput: https://lnkd.in/gSBsmijw
 2. CAP Theorem: https://lnkd.in/gV7NunUD

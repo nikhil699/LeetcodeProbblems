@@ -1,11 +1,16 @@
+# Interview is sheduled on next week probably or else will shedule it for next month for sure Thanks.print
+# JPMC do prepare completely 
+
+
+
 class Solution(object):
     def moveZeroes(self, nums):
+
         """
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
         
-
         start = 0
 
         for element in range(0,len(nums)):

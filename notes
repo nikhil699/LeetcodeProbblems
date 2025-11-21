@@ -1,0 +1,30 @@
+“Difference between Runnable and Callable Interface and when would you use each?”
+ 
+Both Runnable and Callable interfaces are used to define tasks that can be executed by different threads. The key difference is their capability to return a value or handle exceptions.
+ 
+🔹 Runnable Interface
+ 
+• It contains a single run() method with void return type. The run method cannot return a value to the caller thread. It is ideal for tasks that perform an action but do not need to produce a result.
+• It cannot throw checked exceptions and any checked exceptions that occur within the run method must be handled internally.
+ 
+🔹 Callable Interface
+ 
+• It contains a single generic call() method that returns a value. The call() method can return a result of any generic type. This is useful for computational tasks where the result is needed by the main program.
+• It can throw checked exceptions.
+ 
+🛠️ When to use each
+ 
+✔ Use Runnable when you need to execute a task asynchronously but do not need to retrieve a result or handle a checked exception. A common use case is running a background task like logging or updating a UI element.
+ 
+✔ Use Callable when a task performs a computation and needs to return a value to the calling thread. It is also the correct choice when the task is likely to throw a checked exception that needs to be handled by the caller. Examples include fetching data from a database or performing a complex calculation.
+
+
+Notification API will be called
+- Then SQS kind of queue. Where you will have multiple priority queue for different type of notifications 
+- Workers will pick event from this queue
+- Executor will start notifying the users
+- Once they received acknowledgement they will send the result to AWS Kinesis.
+- Kinesis uses data streaming so basically to avoid database bottleneck
+- Datalqke Publisher and DB writer will write result to database
+- Scheduler a chron job will pick failed events
+- Again process is repeated

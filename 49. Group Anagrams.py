@@ -8,7 +8,7 @@ class Solution(object):
         anangram_List = defaultdict(list)
 
         for item in strs:
-            sortedWord = ''.join(sorted(item)) # because its return in a list of word and we want a string
+            sortedWord = ''.join(sorted(item))      # because its return in a list of word and we want a string
             anangram_List[sortedWord].append(item)
 
         return anangram_List.values()

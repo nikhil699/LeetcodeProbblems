@@ -1,5 +1,7 @@
-𝐚𝐬𝐲 - 
-• How is String immutable in Java? 
+Exposure to observability tools (Prometheus, Grafana, ELK Stack).
+
+E𝐚𝐬𝐲 - 
+• How is String immutable in Java? -- 
 • What is a functional interface? 
 • Can a constructor be private? 
 • Which approach is better and why? 
@@ -41,8 +43,6 @@ I walked into a Spring Boot interview last year feeling confident.
  
 They were about real-life scenarios. 
 The kind you only learn when you’ve been burned in production.
-
-Here are medium-level scenario-based Java + Spring Boot questions that come up way more often than you'd expect — and can trip up even experienced developers:
 
 1. How would you debug a memory leak in a Spring Boot microservice? 
 

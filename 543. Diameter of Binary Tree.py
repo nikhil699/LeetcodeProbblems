@@ -26,7 +26,7 @@ class Solution(object):
             # Diameter at this node = left height + right height
             self.diameter = max(self.diameter, left + right)
 
-            return 1 + max(left, right)  # height of subtree
+            # return 1 + max(left, right)  # height of subtree
 
         dfs(root)
         return self.diameter

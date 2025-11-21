@@ -7,14 +7,16 @@ class Solution(object):
         """
         total = 0
         index = 0
+        total_gas = sum(gas)
+        total_cost = sum(cost)
+        
         for item in range(0,len(gas)):
             total = total + gas[item] - cost[item]
             if total < 0:
                 total = 0
                 index = item + 1
         
-        total_gas = sum(gas)
-        total_cost = sum(cost)
+        
 
         if total_gas < total_cost:
             return -1

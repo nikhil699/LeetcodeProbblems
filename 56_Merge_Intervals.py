@@ -16,7 +16,7 @@ class Solution(object):
 
         intervals.sort()
         result.append((intervals[0]))
-        print(intervals)
+    
         for item in range(1,len(intervals)):
             current_interval = intervals[item]  
             previous_interval = result[-1]  

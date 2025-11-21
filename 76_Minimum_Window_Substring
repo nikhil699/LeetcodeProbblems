@@ -1,14 +1,51 @@
 # Aapko minimum length ka substring s se nikalna hai jo t ke sabhi characters ko contain kare (order zaroori nahi hai).
 
-def minimumWindowSubstring(s,t):
+# HashMap + Sliding Window
+# Time Complexity: O(|s| + |t|)
+# Space Complexity: O(|s| + |t|) (hashmaps store करेंगे frequency)
 
-    if len(s) < len(t):
-        return ""
-    
-    if not s or not t:
-        return ""
-    
-    
+from collections import defaultdict
+from collections import Counter 
+class Solution(object):
+    def minWindow(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        countTChar = Counter(t)
+        countSChar = defaultdict(int)
+        tcharCount = len(countTChar)
+        windowSize = 0
+        left = 0
+        substring = ""
+        maxSize = float('inf')
+
+        for right in range(0,len(s)):
+            countSChar[s[right]] += 1
+            
+            if countSChar[s[right]] == countTChar[s[right]]:
+                windowSize += 1
+
+            while windowSize  == tcharCount:
+                if right - left + 1 < maxSize:
+                    maxSize = right - left + 1
+                    substring = s[left:right + 1]
+                
+                countSChar[s[left]] -= 1
+                if countSChar[s[left]] == 0:
+                    del countSChar[s[left]]
+
+                if countSChar[s[left]] < countTChar[s[left]]:
+                    windowSize -= 1
+                
+                left += 1
+        
+        return substring
+
+
+
+            
 
 
 
@@ -16,4 +53,7 @@ def minimumWindowSubstring(s,t):
 s = "ADOBECODEBANC"
 t = "ABC"
 
-print(minimumWindowSubstring(s,t))
+
+sol = Solution()
+
+print(sol.minWindow(s,t))
