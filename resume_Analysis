@@ -1,0 +1,48 @@
+Feedback of Resume
+Resume highlights relevant backend experience and technical stack, which is well-aligned with your aspirations.
+Clear mention of projects at Lloyds Technology Center and Mphasis helps to validate practical exposure.
+Project details are described reasonably but lack quantifiable impact for several points.
+Usage of terminology and acronyms (TRIAD, OCIS, Fiserv) assumes the reader's prior knowledge—could be clarified.
+The structure and flow of the resume satisfactorily showcases main contributions in each role.
+Skills section could be more prominently placed and categorized (e.g., Languages, Frameworks, Cloud, Tooling).
+Lacks easily scannable achievements or recognition points, such as awards or significant milestones.
+Experience in monitoring and troubleshooting in production environments is highlighted.
+
+
+Areas of Improvement in Resume
+Use more quantifiable outcomes for each achievement or project (e.g., increased uptime by X%, reduced errors by Y%).
+Clarify less common terms, acronyms, or company-specific jargon for broader readability.
+Summarize key contributions in bullet points to make highlights stand out.
+Include concise, descriptive headers and possibly a short summary/profile at the top.
+Consider reordering to show technical skills and tools more clearly near the top.
+Add a section for relevant certifications or courses if applicable to enhance credibility.
+
+
+
+Feedback on Skills and Technical Depth for Desired Role
+Familiarity with enterprise-grade microservices, spring ecosystem, and cloud (GCP) aligns well with MNC backend roles.
+Used resilience patterns like Circuit Breaker (Resilience4j), demonstrates awareness of production reliability practices.
+Hands-on experience with observability tools like Dynatrace and Prometheus meets the expected DevOps and operational readiness for large companies.
+Can discuss testing, validation, and response optimization strategies, including async, caching, and indexing, which are key to performance engineering.
+Exposure to third-party service integration and API reliability strategies is a plus.
+Experience with ML-powered systems (MuSE project) suggests flexibility, though details remain too high-level for deep technical scrutiny.
+Sample answers sometimes lacked depth in architectural or data consistency concerns (e.g., transactional strategy, cache invalidation specifics).
+Could better articulate validation and fallback logic for mission-critical systems—explanations were somewhat surface-level.
+
+
+Areas of Improvement in Skills and Technical Depth for Desired Role
+Deepen design and architectural knowledge (e.g., distributed transactions, eventual consistency, CAP theorem) as these are often probed at top MNC backend interviews.
+Be more precise about cache strategies (TTL, eviction, write-through vs write-back, cache-busting scenarios).
+Practice articulating approaches to monitoring, alerting, and root-cause diagnosis with concrete real-world examples.
+Strengthen understanding and explanation of language detection/translation systems—interviewers may dig further into edge cases or fallback mechanisms.
+Simulate more in-depth system design and troubleshooting discussions, as required by hiring managers at Amazon, Microsoft, etc.
+Add more quantifiable impact and stronger narrative around your individual contribution to complex projects.
+Consider hands-on practice on open-ended backend design problems to boost confidence and articulation.
+
+
+(1) how you make sure consistency and isolatoion in your application
+(2) What tools are you using for monitoring and analisis
+(3) how you got to know that you have this issue ( Optimized API performance and database queries, resulting in a 40% reduction in response times and ensuring 99.99%
+system uptime during peak periods.)
+(4) Used in-memory caching where applicable to improve performance and reduce redundant external service calls.
+ye kaise implement keya kya data rakha aur kon se strategy the tumhare isko karte waqt

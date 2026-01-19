@@ -1,11 +1,13 @@
 <!-- https://www.linkedin.com/posts/sumitlad_if-i-travel-back-to-when-i-started-preparing-activity-7300235060853518336-N8cT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEtMvQBOS82FNYVBA08XS2Istc-XujcVQc -->
 
 
+Each employee has 100 reports associated with them.
+Design a system to flag risky individuals (e.g., whistleblowers, data breach risks, data exfiltration, suspicious activity, etc.).
 
 
 
 
-𝐚𝐬𝐲 - 
+E𝐚𝐬𝐲 - 
 • How is String immutable in Java? 
 • What is a functional interface? 
 • Can a constructor be private? 
