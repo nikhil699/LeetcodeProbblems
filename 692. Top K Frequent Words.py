@@ -19,9 +19,13 @@ class Solution(object):
         result = []
         heap = []
 
-        # Time Complexity:  O(n log n) log n for simgle push
+        #print(count)
+
+        # Time Complexity:  O(n log n) log n for simple push
         for item,freq in count.items():
             heapq.heappush(heap, (-freq,item))
+        
+        #print(heap)
 
         # Time Complexity:  O(k log n) log n for simgle pop
         for item in range(k):
