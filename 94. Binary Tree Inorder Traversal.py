@@ -5,21 +5,45 @@ class TreeNode(object):
         self.left = left
         self.right = right
 # left root right
+
+
 class Solution(object):
-    def inorderTraversal(self, root):
-        """
-        :type root: Optional[TreeNode]
-        :rtype: List[int]
-        """
-        result = []
-        def inorder(root):
-            if root is None:
-                return []
-            inorder(root.left)
-            result.append(root.val)
-            inorder(root.right)
+    # def inorderTraversal(self, root):
+    #     """
+    #     :type root: Optional[TreeNode]
+    #     :rtype: List[int]
+    #     """
+    #     result = []
+    #     def inorder(root):
+    #         if root is None:
+    #             return []
+    #         inorder(root.left)
+    #         result.append(root.val)
+    #         inorder(root.right)
         
-        inorder(root)
+    #     inorder(root)
+    #     return result
+    
+
+    def inorderTraversal(self, root):
+        result = []
+        stack = []
+        curr = root
+
+        # Jab tak current node hai ya stack khali nahi hota
+        while curr or stack:
+            # 1. Sabse pehle Left-most node tak jao aur raaste ke nodes stack mein dalo
+            while curr:
+                stack.append(curr)
+                curr = curr.left
+        
+            # 2. Leftmost node ko pop karo aur result mein dalo (Ye Root wala part hai)
+            curr = stack.pop()
+            result.append(curr.val)
+        
+            # 3. Ab Right subtree check karne ke liye pointer move karo
+            curr = curr.right
+        
         return result
         
 
