@@ -1,10 +1,32 @@
+import bisect
+
+
 class Solution(object):
     def searchRange(self, nums, target):
+        
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
+
+
+
+        # result = []
+
+        # if target not in nums:
+        #     return [-1,-1]
+        # else:
+        #     result.append(bisect.bisect_left(nums,target))
+        #     result.append(bisect.bisect_right(nums,target) - 1)
+
+        # return result
+
+        
+
+
+
+
         def findFirst(nums, target):
             left, right = 0, len(nums) - 1
             first = -1

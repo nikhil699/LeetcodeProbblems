@@ -1,3 +1,5 @@
+# approact : first i have to put all the non overlapping interval on left hand side of new declared array result then check for the overlapping intervals then add all the remmaining intervals and return the array at the end.
+
 class Solution(object):
     def insert(self, intervals, newInterval):
 
@@ -7,23 +9,33 @@ class Solution(object):
         :rtype: List[List[int]]
         """
 
-        intervals.append(newInterval)
+        # put all the non overlapping intervals on the left hand side
+        result = []
+        i = 0
 
-        intervals.sort()
-        result = [(intervals[0])]
+        while i < len(intervals) and intervals[i][1] < newInterval[0]:
+            result.append(intervals[i])
+            i += 1
+        
+        # now i have to merged all the overlapping interval
+        while i < len(intervals) and intervals[i][0] <= newInterval[1]:
+            newInterval[0] = min(intervals[i][0], newInterval[0])
 
-        for item in range(1,len(intervals)):
-            # prevInterval pointing to the same element in result top element
-            prevInterval = result[-1]
-            currInterval = intervals[item]
+            newInterval[1] = max(intervals[i][1], newInterval[1])
 
-            if prevInterval[1] >= currInterval[0]:
-                prevInterval[1] = max(prevInterval[1], currInterval[1])
-            
-            else:
-                result.append(currInterval)
+            i += 1
+        
+        result.append(newInterval)
 
-        return result        
+
+        while i < len(intervals):
+            result.append(intervals[i])
+            i += 1
+
+        
+        return result
+
+              
 
 
 sol = Solution()

@@ -7,7 +7,6 @@ class Solution(object):
         :rtype: float
         """
 
-        maxAverage = 0
         left = 0
         maxSum = 0
         result = float('-inf')
@@ -24,8 +23,6 @@ class Solution(object):
         
         return result
             
-            
-
 
 sol = Solution()
 
