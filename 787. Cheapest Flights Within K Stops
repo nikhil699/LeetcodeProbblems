@@ -1,0 +1,41 @@
+# Total complexity: O(E log N)
+# Space complexity : O(E + V)
+# E → for the graph and heap
+# N → if visited set is used to avoid unnecessary revisits
+
+from collections import defaultdict
+import heapq
+
+class Solution(object):
+    def findCheapestPrice(self,n, flights, src, dst, k):
+
+        # declare defaultDict
+        costDistanceGraph = defaultdict(list)
+
+        # Step 1: Build graph
+        for to, fro , costs in flights:
+            costDistanceGraph[to].append((fro, costs))
+        
+        heap = [(0,src,0)] # totalCost -> currentCity -> steps
+        visited = {}
+
+        while heap:
+            totalCost, city , steps = heapq.heappop(heap)
+
+            if city == dst:
+                return totalCost
+            
+            if steps > k:
+                continue
+            
+            if (city, steps) in visited:
+                continue
+            
+            visited[(city, steps)] = totalCost
+
+            for neighbour, price in costDistanceGraph[city]:
+                heapq.heappush(heap, (totalCost + price, neighbour, steps + 1))
+        
+        return -1
+
+

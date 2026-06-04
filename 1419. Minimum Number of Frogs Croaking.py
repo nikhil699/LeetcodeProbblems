@@ -10,8 +10,7 @@ class Solution(object):
             'c' : 0,
             'r' : 0,
             'o' : 0,
-            'a' : 0,
-            'k' : 0
+            'a' : 0
         }
 
         previousStepsFrogs = {
