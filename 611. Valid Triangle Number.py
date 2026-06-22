@@ -9,7 +9,7 @@ class Solution(object):
         nums.sort()
         count = 0
 
-        for item in range(len(nums) - 1 , 1, -1):
+        for item in range(len(nums) -1 , 1, -1):
             left = 0
             right = item - 1
 
